@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;600&family=Roboto+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('../images/favicon-32x32.png'), auto;
+    font-family: Lobster, sans-serif;
+}
+
+body {
+    background: #FFC0CB url(../images/fundo.png) no-repeat center top;
+    background-size: cover;
+    font-size: 62.5%;
+}
+
+main, .dados-incorretos, .dado-correto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px;
+    margin: 50px auto;
+    border: 2px solid red;
+    color: #000;
+    width: 60%;
+    min-width: 250px;
+    max-width: 1300px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #FF0000;
+    background: #fff;
+    gap: 55px;
+}
+
+main > p {
+    font-size: 1.65rem;
+}
+
+main > section.formulario {
+    display: flex;
+    gap: 50px;
+}
+
+main > section.carta {
+    font-size: 1.4rem;
+}
+
+main > section.carta > h2, h1,p {
+    text-align: center;
+}
+
+main > section.carta > h2 {
+    margin: 25px;
+}
+
+main > section.carta > h1 {
+    color: #FF0000;
+    margin-bottom: 35px;
+    background: url();
+}
+
+main > section> picture {
+    text-align: center;
+}
+
+main > section> picture > img {
+    max-width: 200px;
+}
+
+main > section > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > section > form > div > input.text:focus, input.password:focus {
+    box-shadow: 0 0 20px #FF0000;
+}
+
+main > section > form input {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+main > section > form .submit {
+    width: 100%;
+    border: none;
+    background: #FF0000;
+    color: #fff;
+    cursor: url('../images/carta-icon.png'), auto;
+}
+
+main > section > form > div > label {
+    color: #FF0000;
+    font-size: 1.4rem;
+}
+
+.dados-incorretos, .dado-correto {
+    margin: 10px auto;
+    padding: 30px;
+    min-width: 50px;
+    width: auto;
+    max-width: 300px;
+    font-size: 1.2rem;
+}
+
+.dados-incorretos {
+    box-shadow: 0px 0px 10px #7F7F7F ;
+    border: 2px solid #7F7F7F;
+}
+
+.dado-correto {
+    animation: correto 1.1s forwards ;
+}
+
+.carta-animacao {
+    animation: carta-animacao 1s forwards;
+}
+
+@keyframes carta-animacao {
+    0% {
+        transform: translateY(90px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes correto {
+    0% {
+        opacity: 0;
+        transform: translateX(-90px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.none {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    main, .dados-incorretos {
+        width: 80%;
+        padding: 10px;
+    }
+
+    main > section.formulario {
+        display: flex;
+        flex-direction:column ;
+    }
+}
+
+@media screen and (min-width:100px) and (max-width: 1250px) {
+    body {
+        background: pink url(../images/fundo-mobile.png);
+    }
+}
