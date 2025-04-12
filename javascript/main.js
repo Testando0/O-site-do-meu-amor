@@ -10,9 +10,9 @@ formulario.elements.submit.addEventListener('click', function(event){
         let login = formulario.elements.name.value.toLowerCase()
         let senha =  formulario.elements.senha.value.toLowerCase()
 
-        if (senha == 'pao' && login == 'andria') {
+        if (senha == '1234' && login == 'user') {
             secaoIncorreta.classList.add('none')
-            secaoCorreta.innerText = 'Oi meu amor'
+            secaoCorreta.innerText = 'Oii Meu Amor'
             secaoCorreta.classList.add('dado-correto')
             secaoCorreta.classList.remove('none')
             setTimeout(function(){
@@ -27,13 +27,13 @@ formulario.elements.submit.addEventListener('click', function(event){
         if (formulario.elements.senha.value == '' || formulario.elements.name.value == '') {
             secaoIncorreta.classList.remove('none')
             secaoIncorreta.classList.add('dados-incorretos')
-            secaoIncorreta.innerText = 'Preciso ter certeza que é voce, digite algo !'
+            secaoIncorreta.innerText = 'Usuário Ou Senha Incorretos!'
         }
         
-        else if (senha != 'pao' || login!= 'andria') {
+        else if (senha != '1234' || login!= 'user') {
             secaoIncorreta.classList.remove('none')
             secaoIncorreta.classList.add('dados-incorretos')
-            secaoIncorreta.innerText = 'Pessoa ou palavra chave errada'
+            secaoIncorreta.innerText = 'Usuário Ou Senha Incorretos!'
         }
         
 })
